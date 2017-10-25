@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Part 1 - Tax Calculator</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<style type="text/css">
+		h1{
+			color: blue;
+			font-size: 40px;
+		}
+		body{
+			font-size: 18px;
+		}
+
+		div#result{
+			color: blue;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<div>
+		<h1>Tax Form WS2017</h1>
+		<form method="get" action="">
+			<label>Total Amount</label> 
+			<input type="text" name="total_amount" id="total_amount"> 
+			<br><br>
+
+			<label>Tax (%)</label>
+			<input type="text" name="tax_pct" id="tax_pct"> <br>
+			
+			<label>Currency:</label>
+			<select id="currency">
+				<option value="dollar">Dollar</option>
+				<option value="euro">Euro</option>
+			</select>
+
+			<br><br>
+
+			<input type="button" value="Submit" name="Calculate" class="submit">
+			<input type="reset" name="Reset" class="reset">
+		</form>
+	</div>
+
+	<hr>
+
+	<div id="result">
+		
+	</div>
+	</center>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

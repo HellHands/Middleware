@@ -1,0 +1,27 @@
+<% include partials/header %>
+<center>
+<h1>Tax Calculator</h1>
+
+<form action="/taxCalculator" method="POST">
+	<label>Amount: </label>
+	<input type="text" name="amount">
+	<br>
+	<label>Tax (%): </label>
+	<input type="text" name="tax_pct">
+	<br>
+	<label>Currency: </label>
+	<select name="currency">
+		<option value="Dollar">Dollar</option>
+		<option value="Euro">Euro</option>
+	</select>
+	<br>
+	<input type="submit" name="submit" class="submit">
+	<input type="reset" name="reset">
+</form>
+
+<div id="result">
+	<%= result; %>
+</div>
+
+</center>
+<% include partials/footer %>
