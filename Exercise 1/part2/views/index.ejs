@@ -18,9 +18,11 @@
 	<input type="submit" name="submit" class="submit">
 	<input type="reset" name="reset">
 </form>
-
+<hr>
 <div id="result">
-	<%= result; %>
+	<% if(result !== undefined){ %>
+		<%= result; %>
+	<% } %>
 </div>
 
 </center>

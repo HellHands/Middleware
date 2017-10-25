@@ -17,7 +17,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 app.get("/", function(req, res){
-	res.render("index");
+	res.render("index", {
+		result: ""
+	});
+});
+
+
+app.get("/taxCalculator", function(req, res){
+	res.redirect("/");
 });
 
 app.post("/taxCalculator", function(req, res){
@@ -25,7 +32,7 @@ app.post("/taxCalculator", function(req, res){
 	var tax_pct = req.body.tax_pct;
 	var currency = req.body.currency;
 	var result = ((tax_pct/100)*amount);
-	console.log(result);
+	// console.log(result);
 	result = Number(result) + Number(amount);
 	var total_amount = "The toal amount is " + result + " " + currency;
 	res.render("index", {
